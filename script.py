@@ -10,3 +10,4 @@ numbers = [int(num) for num in nums_input.split()]
 result = single_number(numbers)
 print(f"XOR sum: {result}")
 print("hello world")
+print("have a good day (:")
