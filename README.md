@@ -1,6 +1,6 @@
-# XOR Sum App
+# Single number App
 
-This application calculates the XOR sum of a list of numbers.
+This application the single number in a list of numbers.
 
 ## Usage
 
@@ -9,6 +9,8 @@ This application calculates the XOR sum of a list of numbers.
 ```bash
 docker pull ghcr.io/miriprice1/toganetworks/xor-sum-app:latest
 
+### 2. Run the Docker Image
+```bash
 docker run -e XOR_NUMBERS="2 2 1" ghcr.io/miriprice1/toganetworks/xor-sum-app:latest
 docker run -e XOR_NUMBERS="4 1 2 1 2" ghcr.io/miriprice1/toganetworks/xor-sum-app:latest
 docker run -e XOR_NUMBERS="1" ghcr.io/miriprice1/toganetworks/xor-sum-app:latest
