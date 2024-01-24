@@ -13,14 +13,11 @@ jobs:
     - name: Checkout Repository
       uses: actions/checkout@v2
 
-    - name: Set up Python
-      uses: actions/setup-python@v2
-      with:
-        python-version: 3.8
+    - name: Set up Docker
+      uses: docker/setup-docker@v2
 
     - name: Build and Push Docker Image
-      run: 
-        docker login --username miriprice1 --password mirip3541@ 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 ghcr.io
-        docker build -t ghcr.io/miriprice1/toganetworks/xor-sum-app:latest .
+      run: |
         docker login ghcr.io -u ${{ github.actor }} -p ${{ secrets.GITHUB_TOKEN }}
+        docker build -t ghcr.io/miriprice1/toganetworks/xor-sum-app:latest .
         docker push ghcr.io/miriprice1/toganetworks/xor-sum-app:latest
