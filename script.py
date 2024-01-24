@@ -7,3 +7,4 @@ def single_number(nums):
 
 a = [int(num) for num in os.environ["XOR_NUMBERS"].split()]
 print(single_number(a))
+print("hello world")
