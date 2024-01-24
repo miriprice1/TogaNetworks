@@ -37,7 +37,7 @@ COPY script.py /app
 CMD ["python", "script.py"]
 
 # Create a smaller base image
-FROM mcr.microsoft.com/windows/nanoserver:1809
+FROM mcr.microsoft.com/windows/servercore:ltsc2019
 
 # Set the working directory in the container
 WORKDIR /app
@@ -47,3 +47,4 @@ COPY --from=build /app /app
 
 # Run the script with CMD allowing command-line arguments
 CMD ["python", "script.py"]
+
