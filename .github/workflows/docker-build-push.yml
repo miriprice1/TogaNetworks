@@ -18,8 +18,8 @@ jobs:
       with:
         python-version: 3.8
 
-    - name: Build and Push Docker Image
-      run: |
-        docker build -t ghcr.io/miriprice1/toganetworks/xor-sum-app:latest .
-        echo ${{ secrets.GITHUB_TOKEN }} | docker login ghcr.io -u ${{ github.actor }} --password-stdin
-        docker push ghcr.io/miriprice1/toganetworks/xor-sum-app:latest
+    # - name: Build and Push Docker Image
+    #   run: |
+    #     docker build -t ghcr.io/miriprice1/toganetworks/xor-sum-app:latest .
+    #     echo ${{ secrets.GITHUB_TOKEN }} | docker login ghcr.io -u ${{ github.actor }} --password-stdin
+    #     docker push ghcr.io/miriprice1/toganetworks/xor-sum-app:latest
