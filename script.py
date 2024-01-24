@@ -31,4 +31,4 @@ if len(sys.argv) < 2:
 
 # Extract numbers from command-line arguments
 a = [int(arg) for arg in sys.argv[1:]]
-print(f"XOR sum: {single_number(a)} ")
+print(f"XOR sum: {single_number(a)}  ")
