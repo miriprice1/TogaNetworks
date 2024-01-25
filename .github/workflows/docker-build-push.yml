@@ -12,7 +12,7 @@ jobs:
     permissions:
       contents: read
       packages: write
-      
+
     steps:
     - name: Checkout Repository
       uses: actions/checkout@v2
@@ -21,7 +21,12 @@ jobs:
       uses: actions/setup-python@v2
       with:
         python-version: 3.8
-
+    
+    - name: Clone Source Code
+      run: |
+        git clone https://github.com/${{ github.repository }}.git
+        cd $(basename "${{ github.repository }}")
+        
     - name: Build and Push Docker Image
       run: |
         docker login ghcr.io -u ${{ github.actor }} -p ${{ secrets.GITHUB_TOKEN }}
