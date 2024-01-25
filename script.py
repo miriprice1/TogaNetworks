@@ -17,4 +17,4 @@ numbers = [int(num) for num in os.environ["XOR_NUMBERS"].split()]
 result = single_number(numbers)
 
 print(f"XOR sum: {result}")
-print("Hello-World!")
+print("Hello-World !")
